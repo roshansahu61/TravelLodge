@@ -19,6 +19,7 @@ const User = require("./models/user.js");
 
 
 
+
 const listingRouter = require("./routes/listing.js");
 const reviewRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
@@ -39,6 +40,7 @@ async function main() {
     
 
 }
+
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -109,7 +111,7 @@ app.get("/", (req, res) => {
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
-
+// for all incoming rquest
 app.all("*", (req, res, next) => {
     next(new ExpressError(404, "Page Not Found!"));
 })
@@ -123,3 +125,5 @@ app.use((err, req, res, next) => {
 app.listen(3000, () => {
     console.log("server is listening to port 3000");
 });
+
+

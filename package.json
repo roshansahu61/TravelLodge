@@ -11,7 +11,7 @@
     "start": "node app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Roshan",
   "license": "ISC",
   "dependencies": {
     "@mapbox/mapbox-sdk": "^0.16.1",

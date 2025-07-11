@@ -20,7 +20,7 @@
                 </div>
             </div>
     </div>
-    
+        // this will only alow eidt delete if current user is owner of listngs
     <% if(currUser && listing.owner._id.equals(currUser._id)) { %>
         <div class="btns">
             <a href="/listings/<%= listing._id %>/edit" class="btn btn-dark col-1 offset-3 edit-btn">Edit</a>
@@ -83,7 +83,7 @@
         </div>
         <div class=" col-6 offset-3 mb-3">
             <h3> where you will be </h3>
-            <div id="map">
+               <div id="map">
             
             </div>
         </div>
